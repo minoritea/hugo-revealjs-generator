@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="{{ .Site.LanguageCode }}">
+  <head>
+    <meta charset="utf8">
+    <title>{{ .Site.Title }} - {{ .Data.Singular }} </title>
+    <link rel="stylesheet" href="{{ .Site.BaseURL }}/css/reveal.css">
+    <link rel="stylesheet" href="{{ .Site.BaseURL }}/css/theme/night.css">
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides">
+      {{ range .Data.Pages.ByTitle }}
+        <section>
+          {{ .Content }}
+        </section>
+      {{ end }}
+      </div>
+    </div>
+    <script src="{{ .Site.BaseURL }}/js/reveal.js"></script>
+    <script> Reveal.initialize(); </script>
+  </body>
+</html>
