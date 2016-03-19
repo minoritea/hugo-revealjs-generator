@@ -1,6 +1,7 @@
 # Hugo Reveal.js Generator
 
 Simple presentation generator with [hugo](https://gohugo.io) and [reveal.js](http://lab.hakim.se/reveal-js/#/).
+Sample page is here. [https://tanstaafl.0pt.jp/slides/](https://tanstaafl.0pt.jp/slides/)
 
 # How to use
 1. [Install hugo command](https://gohugo.io/overview/installing/).
