@@ -26,7 +26,7 @@ An example is here. [https://tanstaafl.0pt.jp/slides/](https://tanstaafl.0pt.jp/
   $ hugo new your-presentation-name/slide3.md
   # ...
   ```
-  Note that your slides are sorted by its file name(e.g. slide1 > slide2 > slide3 ...).
+  Note that your slides are sorted by title(e.g. slide1 > slide2 > slide3 ...).
 
 5. edit your slides.
   - put your contents into slides in hugo's Markdown format.
