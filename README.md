@@ -47,6 +47,15 @@ An example is here. [https://tanstaafl.0pt.jp/slides/](https://tanstaafl.0pt.jp/
 
 7. Put generated contents(in `public` directory) into your web site.
 
+# How to set a theme to a slides page.
+1. download revealjs themes to `static/css/theme` (some themes are already included).
+2. edit `data/themes.toml`.
+
+  ```toml
+  ["the title of your presentation(converted to lowercase, and singularized)"]
+  theme = "the file name of the theme you want(without `.css` suffix)"
+  ```
+
 # LISENCE
 [MIT LISENCE](https://github.com/minoritea/hugo-revealjs-generator/blob/master/LICENSE.md)
 
