@@ -2,12 +2,22 @@
 <html lang="{{ .Site.LanguageCode }}">
   <head>
     <meta charset="utf8">
-    <title>{{ .Site.Title }} - {{ .Data.Singular }} </title>
-    <link rel="stylesheet" href="{{ .Site.BaseURL }}/css/reveal.css">
-    <link rel="stylesheet" href="{{ .Site.BaseURL }}/css/theme/night.css">
+    <title>{{ .Site.Title }} - {{ singularize .Title }} </title>
+    <link rel="stylesheet" href="{{ $.Site.BaseURL }}/css/reveal.css">
+    {{$title := lower (singularize .Title)}}
+    {{if .Site.Data.themes}}
+      {{with index .Site.Data.themes $title}}
+    <link rel="stylesheet" href="{{ $.Site.BaseURL }}/css/theme/{{.theme}}.css">
+      {{else}}
+    <link rel="stylesheet" href="{{ $.Site.BaseURL }}/css/theme/beige.css">
+      {{end}}
+    {{else}}
+    <link rel="stylesheet" href="{{ $.Site.BaseURL }}/css/theme/beige.css">
+    {{end}}
+    <link rel="stylesheet" href="{{ $.Site.BaseURL }}/css/zenburn.css">
   </head>
   <body>
-    <div class="reveal">
+    <div class="reveal cube center">
       <div class="slides">
       {{ range .Data.Pages.ByTitle }}
         <section>
