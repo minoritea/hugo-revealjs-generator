@@ -16,8 +16,8 @@
   </head>
   <body>
     <ol>
-    {{ range $section, $_ := .Site.Sections }}
-      <li><a href="{{$section | relURL }}">{{$section}}</a></li>
+    {{ range $_, $page := .Site.Sections }}
+      <li><a href="{{$page.Section | relURL }}">{{$page.Section}}</a></li>
     {{ end }}
     </ol>
   </body>
